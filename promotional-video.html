@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Apply Win - Promotional Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .video-container {
+            width: 800px;
+            height: 450px;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .logo-container {
+            margin-bottom: 20px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder-logo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+        .slogan {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+        .subtitle {
+            font-size: 24px;
+            opacity: 0;
+            margin-top: 20px;
+            text-align: center;
+            max-width: 80%;
+            line-height: 1.4;
+            transition: opacity 0.5s ease 1.5s;
+        }
+        .cta-button {
+            margin-top: 40px;
+            padding: 15px 30px;
+            font-size: 24px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            cursor: pointer;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.5s ease 2s;
+            animation: pulse 2s infinite 3s;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .controls button {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255,255,255, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(255,255,255, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+            }
+        }
+        .slide-1 {
+            background: linear-gradient(135deg, #1a1a1a, #333);
+        }
+        .slide-2 {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+        .slide-3 {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+        .benefit-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.5s ease;
+        }
+        .benefit-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease 0.3s;
+        }
+        .benefit-desc {
+            font-size: 20px;
+            text-align: center;
+            max-width: 80%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease 0.6s;
+        }
+        .final-logo {
+            transform: scale(0.5);
+            opacity: 0;
+            transition: all 0.8s ease;
+        }
+        .final-slogan {
+            font-size: 64px;
+            font-weight: bold;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            opacity: 0;
+            transition: all 0.8s ease 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <!-- Slide 1: Intro with Logo and Slogan -->
+        <div class="slide slide-1 active">
+            <div class="logo-container"></div>
+            <img src="https://drive.google.com/file/d/1-MegHbyinU_GWl_Nl3tpa4A7hVWpZSPI/view?usp=sharing" alt="Rabbit Logo" style="border-radius: 50%; object-fit: cover; width: 180px; height: 180px;">
+            </div>
+            <div class="slogan">
+                <span class="word">Click.</span>
+                <span class="word">Apply.</span>
+                <span class="word">Win.</span>
+            </div>
+            <div class="subtitle">Simplify your application process and increase your chances of success.</div>
+            <button class="cta-button">Get Started Now</button>
+        </div>
+
+        <!-- Slide 2: First Benefit -->
+        <div class="slide slide-2">
+            <div class="benefit-icon">⚡</div>
+            <div class="benefit-title">Quick & Easy Application</div>
+            <div class="benefit-desc">Complete your application in minutes, not hours. Our streamlined process eliminates unnecessary steps.</div>
+        </div>
+
+        <!-- Slide 3: Second Benefit -->
+        <div class="slide slide-3">
+            <div class="benefit-icon">🏆</div>
+            <div class="benefit-title">Maximize Your Success</div>
+            <div class="benefit-desc">Smart matching technology connects you with opportunities where you're most likely to succeed.</div>
+        </div>
+
+        <!-- Slide 4: Final CTA -->
+        <div class="slide slide-1">
+            <div class="logo-container final-logo">
+                <img src="/api/placeholder/180/180" alt="Rabbit Logo" style="border-radius: 50%; object-fit: cover;">
+            </div>
+            <div class="final-slogan">Click. Apply. Win.</div>
+            <button class="cta-button">Join Now</button>
+        </div>
+
+        <div class="controls">
+            <button onclick="prevSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
+            <button onclick="restart()">Restart</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        // Initialize first slide animations
+        setTimeout(startCurrentSlideAnimation, 500);
+        
+        function startCurrentSlideAnimation() {
+            const currentSlideEl = slides[currentSlide];
+            
+            if (currentSlide === 0) {
+                // Animate intro slide
+                const words = currentSlideEl.querySelectorAll('.word');
+                words.forEach((word, index) => {
+                    setTimeout(() => {
+                        word.style.opacity = '1';
+                        word.style.transform = 'translateY(0)';
+                    }, 300 * (index + 1));
+                });
+                
+                setTimeout(() => {
+                    currentSlideEl.querySelector('.subtitle').style.opacity = '1';
+                }, 1500);
+                
+                setTimeout(() => {
+                    const cta = currentSlideEl.querySelector('.cta-button');
+                    cta.style.opacity = '1';
+                    cta.style.transform = 'scale(1)';
+                }, 2000);
+            } else if (currentSlide === 3) {
+                // Animate final slide
+                setTimeout(() => {
+                    currentSlideEl.querySelector('.final-logo').style.opacity = '1';
+                    currentSlideEl.querySelector('.final-logo').style.transform = 'scale(1)';
+                }, 300);
+                
+                setTimeout(() => {
+                    currentSlideEl.querySelector('.final-slogan').style.opacity = '1';
+                }, 800);
+                
+                setTimeout(() => {
+                    const cta = currentSlideEl.querySelector('.cta-button');
+                    cta.style.opacity = '1';
+                    cta.style.transform = 'scale(1)';
+                }, 1300);
+            } else {
+                // Animate benefit slides
+                setTimeout(() => {
+                    currentSlideEl.querySelector('.benefit-icon').style.opacity = '1';
+                    currentSlideEl.querySelector('.benefit-icon').style.transform = 'scale(1)';
+                }, 300);
+                
+                setTimeout(() => {
+                    currentSlideEl.querySelector('.benefit-title').style.opacity = '1';
+                    currentSlideEl.querySelector('.benefit-title').style.transform = 'translateY(0)';
+                }, 600);
+                
+                setTimeout(() => {
+                    currentSlideEl.querySelector('.benefit-desc').style.opacity = '1';
+                    currentSlideEl.querySelector('.benefit-desc').style.transform = 'translateY(0)';
+                }, 900);
+            }
+        }
+        
+        function resetSlideAnimations(slideEl) {
+            if (slideEl.classList.contains('slide-1') && !slideEl.classList.contains('active')) {
+                const words = slideEl.querySelectorAll('.word');
+                words.forEach(word => {
+                    word.style.opacity = '0';
+                    word.style.transform = 'translateY(20px)';
+                });
+                
+                const subtitle = slideEl.querySelector('.subtitle');
+                if (subtitle) subtitle.style.opacity = '0';
+                
+                const cta = slideEl.querySelector('.cta-button');
+                if (cta) {
+                    cta.style.opacity = '0';
+                    cta.style.transform = 'scale(0.9)';
+                }
+                
+                const finalLogo = slideEl.querySelector('.final-logo');
+                if (finalLogo) {
+                    finalLogo.style.opacity = '0';
+                    finalLogo.style.transform = 'scale(0.5)';
+                }
+                
+                const finalSlogan = slideEl.querySelector('.final-slogan');
+                if (finalSlogan) finalSlogan.style.opacity = '0';
+            } else {
+                const icon = slideEl.querySelector('.benefit-icon');
+                if (icon) {
+                    icon.style.opacity = '0';
+                    icon.style.transform = 'scale(0.5)';
+                }
+                
+                const title = slideEl.querySelector('.benefit-title');
+                if (title) {
+                    title.style.opacity = '0';
+                    title.style.transform = 'translateY(20px)';
+                }
+                
+                const desc = slideEl.querySelector('.benefit-desc');
+                if (desc) {
+                    desc.style.opacity = '0';
+                    desc.style.transform = 'translateY(20px)';
+                }
+            }
+        }
+        
+        function nextSlide() {
+            // Hide current slide
+            slides[currentSlide].classList.remove('active');
+            resetSlideAnimations(slides[currentSlide]);
+            
+            // Move to next slide
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+            
+            // Start animations for new slide
+            setTimeout(startCurrentSlideAnimation, 100);
+        }
+        
+        function prevSlide() {
+            // Hide current slide
+            slides[currentSlide].classList.remove('active');
+            resetSlideAnimations(slides[currentSlide]);
+            
+            // Move to previous slide
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            
+            // Start animations for new slide
+            setTimeout(startCurrentSlideAnimation, 100);
+        }
+        
+        function restart() {
+            // Hide current slide
+            slides[currentSlide].classList.remove('active');
+            resetSlideAnimations(slides[currentSlide]);
+            
+            // Move to first slide
+            currentSlide = 0;
+            slides[currentSlide].classList.add('active');
+            
+            // Start animations for first slide
+            setTimeout(startCurrentSlideAnimation, 100);
+        }
+        
+        // Auto advance slides
+        let autoAdvance = setInterval(nextSlide, 6000);
+        
+        // Reset timer when manually changing slides
+        document.querySelectorAll('.controls button').forEach(button => {
+            button.addEventListener('click', () => {
+                clearInterval(autoAdvance);
+                autoAdvance = setInterval(nextSlide, 6000);
+            });
+        });
+    </script>
+</body>
+</html>
